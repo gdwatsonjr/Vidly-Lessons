@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Glenn_Vidly.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()

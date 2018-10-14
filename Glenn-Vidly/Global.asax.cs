@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using AutoMapper;
 using Glenn_Vidly.App_Start;
+using Vidly;
 
 namespace Glenn_Vidly
 {
