@@ -52,12 +52,12 @@
                 minLength: 3,
                 highlight: true
             }, {
-                name: 'customers',
-                display: 'name',
-                source: customers
-            }).on("typeahead:select", function(e, customer) {
-                vm.customerId = customer.id;
-            });
+                    name: 'customers',
+                    display: 'name',
+                    source: customers
+                }).on("typeahead:select", function (e, customer) {
+                    vm.customerId = customer.id;
+                });
 
             var movies = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
@@ -72,16 +72,16 @@
                 minLength: 3,
                 highlight: true
             }, {
-                name: 'movies',
-                display: 'name',
-                source: movies
-            }).on("typeahead:select", function (e, movie) {
-                $("#movies").append("<li class='list-group-item'>" + movie.name + "</li>");
+                    name: 'movies',
+                    display: 'name',
+                    source: movies
+                }).on("typeahead:select", function (e, movie) {
+                    $("#movies").append("<li class='list-group-item'>" + movie.name + "</li>");
 
-                $("#movie").typeahead("val", "");
+                    $("#movie").typeahead("val", "");
 
-                vm.movieIds.push(movie.id);
-            });
+                    vm.movieIds.push(movie.id);
+                });
 
             $.validator.addMethod("validCustomer", function () {
                 return vm.customerId && vm.customerId !== 0;
@@ -98,20 +98,20 @@
                         method: "post",
                         data: vm
                     })
-                    .done(function () {
-                        toastr.success("Rentals successfully recorded.");
+                        .done(function () {
+                            toastr.success("Rentals successfully recorded.");
 
-                        $("#customer").typeahead("val", "");
-                        $("#movie").typeahead("val", "");
-                        $("#movies").empty();
+                            $("#customer").typeahead("val", "");
+                            $("#movie").typeahead("val", "");
+                            $("#movies").empty();
 
-                        vm = { movieIds: [] };
+                            vm = { movieIds: [] };
 
-                        validator.resetForm();
-                    })
-                    .fail(function () {
-                        toastr.error("Something unexpected happened.");
-                    });
+                            validator.resetForm();
+                        })
+                        .fail(function () {
+                            toastr.error("Something unexpected happened.");
+                        });
 
                     return false;
                 }
