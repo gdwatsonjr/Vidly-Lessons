@@ -211,6 +211,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApiI\CustomersController.cs" />
     <Compile Include="Controllers\ApiI\MoviesController.cs" />
+    <Compile Include="Controllers\ApiI\NewRentalsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -280,8 +281,22 @@
     <Compile Include="Migrations\201810142143084_AddDrivingLicenseToApplicationUser.Designer.cs">
       <DependentUpon>201810142143084_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810160239362_AddedRentals.cs" />
+    <Compile Include="Migrations\201810160239362_AddedRentals.Designer.cs">
+      <DependentUpon>201810160239362_AddedRentals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810160302424_AddNumberAvaliable.cs" />
+    <Compile Include="Migrations\201810160302424_AddNumberAvaliable.Designer.cs">
+      <DependentUpon>201810160302424_AddNumberAvaliable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810170126072_SetNumberAvailable.cs" />
+    <Compile Include="Migrations\201810170126072_SetNumberAvailable.Designer.cs">
+      <DependentUpon>201810170126072_SetNumberAvailable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -412,6 +427,7 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -623,6 +639,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810142143084_AddDrivingLicenseToApplicationUser.resx">
       <DependentUpon>201810142143084_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810160239362_AddedRentals.resx">
+      <DependentUpon>201810160239362_AddedRentals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810160302424_AddNumberAvaliable.resx">
+      <DependentUpon>201810160302424_AddNumberAvaliable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810170126072_SetNumberAvailable.resx">
+      <DependentUpon>201810170126072_SetNumberAvailable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
-using Glenn_Vidly.Models;
+using Vidly.Models;
 using Vidly.Models;
 using Vidly.ViewModels;
 
